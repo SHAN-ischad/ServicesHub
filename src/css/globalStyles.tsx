@@ -8,7 +8,12 @@ export const globalStyles = StyleSheet.create({
     lowFont: {},
 
     // Colors
-    redColor: {},
-    blueColor: {},
+    redColor: { backgroundColor: "#CF4137" },
+    // cores para blocos/colors for blocks/sections
+    // ---------------------------------------------------
+    orangeColor: { backgroundColor: "#F7760C" },
+    /* Cores de fundos/Backgrounds colors
+    ---------------------------------------------------*/
+    blackColor: { backgroundColor: "#33302D" }
 
 })

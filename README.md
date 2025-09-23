@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# ServicesHub
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descrição
 
-## Get started
+**ServicesHub** é uma aplicação desenvolvida com [Expo](https://expo.dev/) e [React Native](https://reactnative.dev/), utilizando o roteamento do Expo Router e estilização com [NativeWind](https://www.nativewind.dev/) (Tailwind CSS para React Native). O objetivo do projeto é conectar prestadores de serviços a clientes de forma eficiente e confiável, promovendo oportunidades para todos os envolvidos.
 
-1. Install dependencies
+## Estrutura do Projeto
 
-   ```bash
+```
+assets/
+  fonts/
+    JetBrainsMono-Bold.ttf
+  images/
+    (diversos ícones e logos)
+src/
+  app/
+    _layout.tsx         # Componente principal, carrega fontes e define navegação
+    index.tsx           # Tela inicial (Login e apresentação)
+    Drawer/
+      _layout.tsx
+      homeHub.tsx
+  css/
+    global.css          # Estilos globais para NativeWind
+    globalStyles.tsx    # Estilos globais em JS/TS (cores, fontes)
+  hooks/
+    (hooks customizados)
+.vscode/
+  settings.json
+metro.config.js         # Configuração do Metro bundler para NativeWind
+tailwind.config.js      # Configuração do Tailwind/NativeWind
+babel.config.js         # Configuração do Babel para NativeWind
+tsconfig.json           # Configuração do TypeScript
+package.json            # Dependências e scripts do projeto
+```
+
+## Tecnologias Utilizadas
+
+- **Expo**: Plataforma para desenvolvimento React Native.
+- **React Native**: Framework para desenvolvimento mobile.
+- **Expo Router**: Navegação baseada em arquivos.
+- **NativeWind**: Utilização de classes Tailwind CSS no React Native.
+- **TypeScript**: Tipagem estática para JavaScript.
+- **Custom Fonts**: Fonte JetBrainsMono-Bold carregada globalmente.
+
+## Principais Funcionalidades
+
+- **Tela Inicial**: Apresentação da plataforma e área de login.
+- **Estilização**: Uso de Tailwind CSS via NativeWind e estilos globais via StyleSheet.
+- **Fontes Customizadas**: Fonte JetBrainsMono-Bold aplicada globalmente.
+- **Navegação**: Estrutura pronta para navegação com Expo Router.
+
+## Como Rodar o Projeto
+
+1. Instale as dependências:
+   ```sh
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-   npx expo start
+2. Inicie o projeto:
+   ```sh
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+3. Siga as instruções do Expo para rodar no emulador, dispositivo físico ou web.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Observações
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Certifique-se de que o arquivo de fonte está em `assets/fonts/JetBrainsMono-Bold.ttf`.
+- O carregamento das fontes é feito no arquivo `src/app/_layout.tsx`.
+- O NativeWind depende da configuração correta do `metro.config.js` e do arquivo CSS global.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
