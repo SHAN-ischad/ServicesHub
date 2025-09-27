@@ -8,9 +8,10 @@ export const globalStyles = StyleSheet.create({
     // ------------------------------------------------------
 
     // Size Fonts
+    extraLargeFont: { fontSize: 24 },
     largeFont: { fontSize: 22 },
-    mediumFont: { fontSize: 20 },
-    highFont: { fontSize: 18 },
+    highFont: { fontSize: 20 },
+    mediumFont: { fontSize: 18 },
     lowFont: { fontSize: 16 },
     smallFont: { fontSize: 14 },
     verySmallFont: { fontSize: 12 },
@@ -23,7 +24,7 @@ export const globalStyles = StyleSheet.create({
     // cores para blocos/colors for blocks/sections
     redColor: { backgroundColor: "#CF4137" },
     orangeColor: { backgroundColor: "#F7760C" },
-    purpleColor: { backgroundColor: "#9948CF" },
+    purpleColor: { backgroundColor: "#8333FF" },
     grayColor: { backgroundColor: "#3A3A3A" },
     redColorError: { backgroundColor: '#F50404' },
     blackColorLow: { backgroundColor: "#3F3F3E" },
@@ -37,5 +38,10 @@ export const globalStyles = StyleSheet.create({
     bronwFonts: { color: "#4F413F" },
     whiteFonts: { color: "#FFFFFF" },
     redFonts: { color: "#F44516" },
+    // ---------------------------------------------------
+
+    // cores para botões/colors for buttons
+    purpleButton: { backgroundColor: "#7860FC" },
+
     // ---------------------------------------------------
 })
