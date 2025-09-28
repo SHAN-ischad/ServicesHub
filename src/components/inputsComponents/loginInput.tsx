@@ -5,8 +5,9 @@ import { Text, TextInput, View } from 'react-native';
 interface loginText {
     title: string,
     placeholder: string,
+    keyboardType: string | "email-address" | "password",
 }
-export function LoginInput({ title, placeholder }: loginText) {
+export function LoginInput({ title, placeholder, keyboardType }: loginText) {
 
     return (
 
@@ -19,6 +20,7 @@ export function LoginInput({ title, placeholder }: loginText) {
                 className='border-gray-300 bg-white border-[1px] p-[10px] rounded-md'
                 placeholder={placeholder}
                 selectionColor={"000"}
+
             />
         </View>
 
