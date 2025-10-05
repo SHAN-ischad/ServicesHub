@@ -1,10 +1,36 @@
+import { useState } from 'react';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { LoginInput } from '../components/inputsComponents/loginInput';
+import { Toastify } from '../components/toastContainer';
 import "../css/global.css";
 import { globalStyles } from '../css/globalStyles';
+import { useLoginAuth } from '../hooks/loginAuth';
 
-// componentes animados/animated
+
 export default function Login() {
+  // Variáveis de ambiente/Environment variables
+  const { login } = useLoginAuth()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [toast, setToast] = useState({ message: '', type: 'info', key: 0 })
+
+  async function handleLogin() {
+    if (!email && !password) {
+      setToast({ message: "Preencha o e-mail e a senha.", type: "error", key: Date.now() });
+      return;
+    }
+
+    const result = await login(email, password);
+    if (result.success) {
+      setToast({ message: "Login realizado com sucesso!", type: "success", key: Date.now() });
+    } else if (result.error) {
+      setToast({ message: result.error, type: "error", key: Date.now() });
+    } else {
+      setToast({ message: "Erro desconhecido", type: "info", key: Date.now() });
+    }
+  }
+
+
   return (
     <ScrollView
       style={[
@@ -77,20 +103,22 @@ export default function Login() {
           {/* formulário de login/Login form */}
           <View className="w-full gap-[15px] flex-col items-center">
             <LoginInput
-              keyboardType="email-address"
               placeholder="Email. Ex(user@gmail)"
               title="Email"
+              value={email}
+              onChangeText={setEmail}
             />
 
             <LoginInput
-              keyboardType="password"
               placeholder="Senha/Password"
               title="Senha"
-            />
+              value={password}
+              onChangeText={setPassword} />
 
             {/* Button */}
             <View className="mt-[30px]">
               <Pressable
+                onPress={handleLogin}
                 style={[
                   globalStyles.purpleButton
                 ]}
@@ -129,6 +157,7 @@ export default function Login() {
           </View>
         </View>
       </View>
+      <Toastify message={toast.message} type={toast.type as any} key={toast.key} />
     </ScrollView>
   );
 }
