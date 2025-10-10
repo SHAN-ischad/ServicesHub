@@ -56,5 +56,10 @@ export const globalStyles = StyleSheet.create({
     // ---------------------------------------------------
 
     // cores para bordas/colors for borders
-    grayBorder: { borderColor: "#505050" }
+    grayBorder: { borderColor: "#505050" },
+    blackBorder: { borderColor: "#33302D" },
+    whiteBorder: { borderColor: "#FFFFFF" },
+
+    // ---------------------------------------------------
+
 })

@@ -146,7 +146,7 @@ export default function Login() {
                   globalStyles.whiteFonts
                 ]}
               >
-                Não possui conta?{" "}
+                Não possui conta?
                 <Pressable className="group/cadastro">
                   <Text className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
                     Faça seu cadastro

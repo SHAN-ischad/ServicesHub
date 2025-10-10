@@ -18,7 +18,7 @@ export function LoginInput({ title, placeholder, onChangeText, value }: loginTex
             {/* input */}
             <TextInput
                 style={[globalStyles.grayColor, globalStyles.blackColor, globalStyles.smallFont, globalStyles.JetBrainsFont]}
-                className='border-gray-300 bg-white border-[1px] p-[10px] rounded-md'
+                className='border-gray-300 bg-white border-[1px] p-[10px] rounded-md focus:outline-none'
                 placeholder={placeholder}
                 selectionColor={"000"}
                 value={value}
