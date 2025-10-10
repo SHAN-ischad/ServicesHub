@@ -22,6 +22,7 @@ export const globalStyles = StyleSheet.create({
     // Colors
 
     // cores para blocos/colors for blocks/sections
+    whiteColor: { backgroundColor: "#FFFFFF" },
     redColor: { backgroundColor: "#CF4137" },
     orangeColor: { backgroundColor: "#F7760C" },
     purpleColor: { backgroundColor: "#8333FF" },
@@ -50,7 +51,10 @@ export const globalStyles = StyleSheet.create({
 
     smallImageLogo: { width: 150, height: 150 },
     extraSmallImageLogo: { width: 90, height: 90 },
+    verySmallImageLogo: { width: 45, height: 45 },
 
     // ---------------------------------------------------
 
+    // cores para bordas/colors for borders
+    grayBorder: { borderColor: "#505050" }
 })
