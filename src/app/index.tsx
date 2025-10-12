@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { LoginInput } from '../components/inputsComponents/loginInput';
@@ -9,6 +10,7 @@ import { useLoginAuth } from '../hooks/loginAuth';
 
 export default function Login() {
   // Variáveis de ambiente/Environment variables
+  const router = useRouter()
   const { login } = useLoginAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -147,7 +149,9 @@ export default function Login() {
                 ]}
               >
                 Não possui conta?
-                <Pressable className="group/cadastro">
+                <Pressable
+                  onPress={() => { router.push('/cadaster') }}
+                  className="group/cadastro">
                   <Text className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
                     Faça seu cadastro
                   </Text>

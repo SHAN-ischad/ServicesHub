@@ -1,9 +1,13 @@
+import { useRouter } from 'expo-router';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { LoginAlt } from '../components/buttonsComponents/loginAltButtons';
 import { CadasterInput } from '../components/inputsComponents/cadasterInput';
 import { globalStyles } from '../css/globalStyles';
 
 export default function Cadaster() {
+
+    const router = useRouter()
+
     return (
         <ScrollView
             style={globalStyles.blackColor}
@@ -65,7 +69,9 @@ export default function Cadaster() {
                                 ]}
                             >
                                 Já possuí uma conta?
-                                <Pressable className="group/cadastro">
+                                <Pressable
+                                    onPress={() => { router.replace('/') }}
+                                    className="group/cadastro">
                                     <Text className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
                                         {''} Faça seu Login
                                     </Text>
