@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
-import { Image, Pressable, ScrollView, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { LoginAlt } from '../components/buttonsComponents/loginAltButtons';
+import { AnimatedLogo } from '../components/imageComponents/animatedTheHubLogo';
 import { CadasterInput } from '../components/inputsComponents/cadasterInput';
 import { globalStyles } from '../css/globalStyles';
 
@@ -15,7 +16,7 @@ export default function Cadaster() {
             contentContainerStyle={{ flexGrow: 1 }}
         >
 
-            <View className='w-full h-0 items-end '><Image style={[globalStyles.smallImageLogo,]} source={require('@/assets/images/thehubLogoFull.png')} /></View>
+            <View className='w-full h-0 items-end '><AnimatedLogo /></View>
 
             <View className="w-full flex-1 my-[2%]  justify-center items-center">
                 {/* Cadaster Content */}
@@ -28,7 +29,7 @@ export default function Cadaster() {
                     >Cadastro</Text>
                     {/* Botões da cadastro e login/Registration and login buttons  */}
                     <View className='w-full flex-col gap-[10px] mt-[15px] items-center'>
-                        <LoginAlt image={require('@/assets/images/googleIcon.png')} text={'Faça login com o google'} />
+                        <LoginAlt image={require('../../assets/images/googleIcon.png')} text={'Faça login com o google'} />
                     </View>
 
                     {/* TextInputsArea */}
@@ -72,7 +73,9 @@ export default function Cadaster() {
                                 <Pressable
                                     onPress={() => { router.replace('/') }}
                                     className="group/cadastro">
-                                    <Text className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
+                                    <Text
+                                        style={[globalStyles.purpleFonts]}
+                                        className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
                                         {''} Faça seu Login
                                     </Text>
                                 </Pressable>

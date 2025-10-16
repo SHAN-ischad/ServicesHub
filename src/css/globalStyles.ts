@@ -4,10 +4,12 @@ import { StyleSheet } from "react-native";
 export const globalStyles = StyleSheet.create({
     // Fonts
     JetBrainsFont: { fontFamily: 'JetBrainsMono-Bold' },
+    googleScansCode: { fontFamily: 'GoogleSansCode-Regular' },
 
     // ------------------------------------------------------
 
     // Size Fonts
+    megaFont: { fontSize: 35 },
     extraLargeFont: { fontSize: 24 },
     largeFont: { fontSize: 22 },
     highFont: { fontSize: 20 },
@@ -40,6 +42,8 @@ export const globalStyles = StyleSheet.create({
     bronwFonts: { color: "#4F413F" },
     whiteFonts: { color: "#FFFFFF" },
     redFonts: { color: "#F44516" },
+    blueFonts: { color: "#0000FF" },
+    purpleFonts: { color: "#9900FF" },
     // ---------------------------------------------------
 
     // cores para botões/colors for buttons

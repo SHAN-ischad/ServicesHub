@@ -47,16 +47,16 @@ export default function Login() {
             globalStyles.extraLargeFont,
             globalStyles.JetBrainsFont
           ]}
-          className="text-[20pt] text-center text-white"
+          className="text-[20pt] font-bold text-center text-white"
         >
-          Bem Vindo ao TheHub
+          Bem Vindo ao <Text style={[globalStyles.purpleFonts, globalStyles.megaFont, globalStyles.googleScansCode]}>TheHub</Text>
         </Text>
 
         <Image
           style={[
             globalStyles.smallImageLogo
           ]}
-          source={require('@/assets/images/thehubLogoFull.png')}
+          source={require('../../assets/images/thehubLogoFull.png')}
         />
       </View>
 
@@ -152,8 +152,10 @@ export default function Login() {
                 <Pressable
                   onPress={() => { router.push('/cadaster') }}
                   className="group/cadastro">
-                  <Text className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
-                    Faça seu cadastro
+                  <Text
+                    style={[globalStyles.purpleFonts]}
+                    className="group-hover/cadastro:text-[19px] group-hover/cadastro:ml-[7px] transition-all duration-200">
+                    {" "}Faça seu cadastro
                   </Text>
                 </Pressable>
               </Text>
