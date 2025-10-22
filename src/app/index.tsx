@@ -38,7 +38,7 @@ export default function Login() {
       style={[
         globalStyles.blackColor
       ]}
-      className="flex-1 grid-flow-col max-lg:p-[2%] max-lg:pb-[4%]"
+      className="flex-1 grid-flow-col max-lg:p-[2%] max-lg:pb-[4%] p-[2%]"
     >
       {/* Header */}
       <View className="w-full flex-row justify-center items-center min-h-[80px] max-h-fit">
@@ -68,7 +68,7 @@ export default function Login() {
           style={[
             // globalStyles.purpleColor
           ]}
-          className="flex-[55%] max-lg:w-full max-lg:ml-0 max-lg:min-h-[300px] p-[10px] bg-gradient-to-r from-[#8333FF] to-[#3F3F3E]  items-center justify-center ml-[5%] min-h-[200px] rounded-md"
+          className="flex-[55%] max-lg:w-full max-lg:ml-0 max-lg:min-h-[300px] p-[10px] bg-gradient-to-r from-[#8333FF] to-[#3F3F3E]  items-center justify-center ml-[5%] min-h-[200px] rounded-md min-[800px]:w-[750px] min-[800px]:mx-auto"
         >
           <Text
             selectable={false}
@@ -89,7 +89,7 @@ export default function Login() {
           style={[
             globalStyles.grayColor
           ]}
-          className="flex-[25%] p-[10px] rounded-md min-h-[400px] max-h-fit mr-[5%] max-lg:mr-0 min-w-fit"
+          className="flex-[25%] p-[10px] rounded-md min-h-[400px] max-h-fit mr-[5%] max-lg:mr-0 min-w-fit min-[800px]:w-[750px] min-[800px]:mx-auto"
         >
           <Text
             style={[

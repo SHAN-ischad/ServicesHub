@@ -63,6 +63,7 @@ export const globalStyles = StyleSheet.create({
     grayBorder: { borderColor: "#505050" },
     blackBorder: { borderColor: "#33302D" },
     whiteBorder: { borderColor: "#FFFFFF" },
+    greenBorder: { borderColor: "#34D399" },
 
     // ---------------------------------------------------
 
