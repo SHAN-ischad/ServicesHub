@@ -8,15 +8,21 @@ interface cadasterInputProps {
     value: string,
     onChangeText: (text: string) => void,
     isValid?: boolean // <--- nova prop opcional
+    showError?: boolean,
+    errorText?: string // <-- nova prop: mensagem de erro
 }
-export function CadasterInput({ topText, placeholder, isRequired, value, onChangeText, isValid }: cadasterInputProps) {
+export function CadasterInput({ topText, placeholder, isRequired, value, onChangeText, isValid, showError, errorText }: cadasterInputProps) {
     // borda verde quando isValid === true, cinza padrão quando false ou undefined
-    const borderStyle = { borderColor: isValid ? '#34D399' : '#3a3a3a' }; // #34D399 = emerald-400
+    const trimmed = value?.trim?.() ?? ''
+    const borderStyle = {
+        borderColor: isValid === true ? '#34D399' :
+            (isValid === false && (showError || trimmed.length > 0)) ? '#EF4444' : '#3a3a3a'
+    };
 
     return (
 
         <>
-            <View className='flex-col gap-[10px]'>
+            <View className='flex-col gap-[6px]'>
                 <Text
                     style={[globalStyles.highFont, globalStyles.whiteFonts, globalStyles.JetBrainsFont]}
                     className='justify-start ml-[5px]'>{topText}
@@ -30,6 +36,10 @@ export function CadasterInput({ topText, placeholder, isRequired, value, onChang
                     className='w-[200px] max-w-full p-[10px] rounded-md border-[1px] focus:outline-none transition-border duration-200'
                     underlineColorAndroid="transparent"
                 />
+                {/* mostra a mensagem de erro quando for para exibir */}
+                {showError && errorText ? (
+                    <Text style={[globalStyles.lowFont, globalStyles.redFonts, { marginLeft: 6 }]}>{errorText}</Text>
+                ) : null}
             </View>
         </>
     );
