@@ -1,11 +1,11 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
-import { LoginAlt } from '../components/buttonsComponents/loginAltButtons';
-import { AnimatedLogo } from '../components/imageComponents/animatedTheHubLogo';
-import { CadasterInput } from '../components/inputsComponents/cadasterInput';
-import { Toastify } from "../components/toastContainer";
-import { globalStyles } from '../css/globalStyles';
+import { LoginAlt } from '../../components/buttonsComponents/loginAltButtons';
+import { AnimatedLogo } from '../../components/imageComponents/animatedTheHubLogo';
+import { CadasterInput } from '../../components/inputsComponents/cadasterInput';
+import { Toastify } from "../../components/toastContainer";
+import { globalStyles } from '../../css/globalStyles';
 
 
 export default function Cadaster() {
@@ -140,7 +140,7 @@ export default function Cadaster() {
                     >Cadastro</Text>
                     {/* Botões da cadastro e login/Registration and login buttons  */}
                     <View className='w-full flex-col gap-[10px] mt-[15px] items-center'>
-                        <LoginAlt image={require('../../assets/images/googleIcon.png')} text={'Faça login com o google'} />
+                        <LoginAlt image={require('../../../assets/images/googleIcon.png')} text={'Faça login com o google'} />
                     </View>
 
                     {/* TextInputsArea */}

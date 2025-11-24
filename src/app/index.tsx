@@ -150,7 +150,7 @@ export default function Login() {
               >
                 Não possui conta?
                 <Pressable
-                  onPress={() => { router.push('/cadaster') }}
+                  onPress={() => { router.push('/CadasterPages/cadaster') }}
                   className="group/cadastro">
                   <Text
                     style={[globalStyles.purpleFonts]}
