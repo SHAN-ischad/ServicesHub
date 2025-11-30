@@ -48,6 +48,7 @@ export const globalStyles = StyleSheet.create({
 
     // cores para botões/colors for buttons
     purpleButton: { backgroundColor: "#7860FC" },
+    whiteButton: { backgroundColor: "#B5AFAE" },
 
     // ---------------------------------------------------
 

@@ -1,8 +1,8 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
-import { LoginInput } from '../components/inputsComponents/loginInput';
-import { Toastify } from '../components/toastContainer';
+import { LoginInput } from '../Components/inputsComponents/loginInput';
+import { Toastify } from '../Components/toastContainer';
 import "../css/global.css";
 import { globalStyles } from '../css/globalStyles';
 import { useLoginAuth } from '../hooks/loginAuth';

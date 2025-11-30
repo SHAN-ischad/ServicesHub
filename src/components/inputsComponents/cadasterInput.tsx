@@ -12,6 +12,13 @@ interface cadasterInputProps {
     errorText?: string // <-- nova prop: mensagem de erro
 }
 export function CadasterInput({ topText, placeholder, isRequired, value, onChangeText, isValid, showError, errorText }: cadasterInputProps) {
+
+    const handleChange = (text: string) => {
+        console.log(`[CadasterInput] ${topText} onChangeText:`, text)
+        onChangeText(text)
+    }
+
+
     // borda verde quando isValid === true, cinza padrão quando false ou undefined
     const trimmed = value?.trim?.() ?? ''
     const borderStyle = {
@@ -30,8 +37,8 @@ export function CadasterInput({ topText, placeholder, isRequired, value, onChang
                 </Text>
                 <TextInput
                     placeholder={placeholder}
-                    value={value}
-                    onChangeText={onChangeText}
+                    defaultValue={value ?? ""}
+                    onChangeText={handleChange}
                     style={[globalStyles.JetBrainsFont, globalStyles.smallFont, globalStyles.grayBorder, globalStyles.blackColor, globalStyles.whiteFonts, borderStyle]}
                     className='w-[200px] max-w-full p-[10px] rounded-md border-[1px] focus:outline-none transition-border duration-200'
                     underlineColorAndroid="transparent"
